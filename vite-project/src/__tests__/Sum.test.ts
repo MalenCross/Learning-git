@@ -12,7 +12,7 @@ test('div(8,2) = 4', () => {
 
 test('SumOfSquares(2, 4) = 18', () => {
   let result = SumOfSquares(2, 4);
-  expect(result).toBe(18)
+  expect(result).toBe(20)
 })
 
 test('Greeting("Malen") = "Hello Malen"', () => {

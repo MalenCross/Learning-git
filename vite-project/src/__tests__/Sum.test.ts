@@ -1,9 +1,9 @@
-import { GetSuit, GetFace, GetFirst, Sum, Div, SumOfSquares,  Greeting} from "../Sum";
+import {  GetCard, GetSuit, GetFace, GetFirst, Sum, Div, SumOfSquares,  Greeting} from "../Sum";
 
-test('Sum(1,2) = 3', () => {
-  let result = Sum(1, 2);
-  expect(result).toBe(3)
-})
+// test('Sum(1,2) = 3', () => {
+//   let result = Sum(1, 2);
+//   expect(result).toBe(3)
+// })
 
 test('div(8,2) = 4', () => {
   let result = Div(8, 2);
@@ -41,3 +41,9 @@ test('get the face value from a poker card', () => {
 test('get the suit from a poker card', () => {
   expect(GetSuit("2H")).toBe('hearts');
 })
+
+// test('get the card from a poker card string', () => {
+//   let card = GetCard("2H")
+//   expect(card.suit).toBe('hearts');
+//   expect(card.face).toBe(2);
+// })

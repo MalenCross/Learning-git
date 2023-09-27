@@ -18,10 +18,6 @@ export function GetFirst(arr:number[]) :number {
 	return arr[0];
 }
 
-export function GetSuit(cardString:string) :string {
-	return cardString;
-}
-
 // export interface Card {
 // 	suit: string
 // 	face: number
@@ -33,20 +29,31 @@ export function GetSuit(cardString:string) :string {
 
 export function GetFace(cardString:string) :any {
 	let firstLetter = cardString[0];
+	let face = 0;
 	if(firstLetter === 'A') {
-		return 14;
+		face = 14;
 	}
 	if(firstLetter === 'K') {
-		return 13;
+		face = 13;
 	}
 	if(firstLetter === 'Q') {
-		return 12;
+		face = 12;
 	}
 	if(firstLetter === 'J') {
-		return 11;
+		face = 11;
 	}
 	if(firstLetter === 'T') {
-		return 10;
+		face = 10;
+	} else {
+		face = parseInt(firstLetter)
 	}
-	return parseInt(firstLetter)
+	return face;
 }
+
+export function GetSuit(cardString:string) :string {
+	return cardString;
+}
+
+// export function GetCard(cardString:string) : any {
+// 	return undefined;
+// }

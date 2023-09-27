@@ -1,9 +1,9 @@
-import {  GetCard, GetSuit, GetFace, GetFirst, Sum, Div, SumOfSquares,  Greeting} from "../Sum";
+import {GetSuit, GetFace, GetFirst, Sum, Div, SumOfSquares,  Greeting} from "../Sum";
 
-// test('Sum(1,2) = 3', () => {
-//   let result = Sum(1, 2);
-//   expect(result).toBe(3)
-// })
+test('Sum(1,2) = 3', () => {
+  let result = Sum(1, 2);
+  expect(result).toBe(3)
+})
 
 test('div(8,2) = 4', () => {
   let result = Div(8, 2);

@@ -1,4 +1,4 @@
-import { Sum, Div, SumOfSquares,  Greeting} from "../Sum";
+import { GetSuit, GetFace, GetFirst, Sum, Div, SumOfSquares,  Greeting} from "../Sum";
 
 test('Sum(1,2) = 3', () => {
   let result = Sum(1, 2);
@@ -18,4 +18,26 @@ test('SumOfSquares(2, 4) = 18', () => {
 test('Greeting("Malen") = "Hello Malen"', () => {
   let result =  Greeting("Malen");
   expect(result).toBe("Hello Malen")
+})
+
+test('get the first element from an array', () => {
+  let result = GetFirst([5,2,3,4]);
+  expect(result).toBe(5)
+})
+
+// winner("2H 4D 5S 8C 9C", "4H 4S 5D 8S 9H") ->  "Player 2 Wins - Pair of fours"
+
+test('get the face value from a poker card', () => {
+  expect(GetFace("2H")).toBe(2);
+  expect(GetFace("3H")).toBe(3);
+  expect(GetFace("5H")).toBe(5);
+  expect(GetFace("TH")).toBe(10);
+  expect(GetFace("JS")).toBe(11)
+  expect(GetFace("QH")).toBe(12);
+  expect(GetFace("KH")).toBe(13);
+  expect(GetFace("AS")).toBe(14)
+});
+
+test('get the suit from a poker card', () => {
+  expect(GetSuit("2H")).toBe('hearts');
 })
